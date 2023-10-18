@@ -1,4 +1,4 @@
-const filterVIPUsers = (users, vipUserIdsSet) => {
+const filterVipUsers = (users, vipUserIdsSet) => {
   const vipUserObjects = [];
 
   for (let i = 0; i < users.length; i++) {
@@ -23,6 +23,6 @@ const multiplicativeAverage = (nums) => {
 };
 
 module.exports = {
-  filterVIPUsers,
+  filterVipUsers,
   multiplicativeAverage,
 };
