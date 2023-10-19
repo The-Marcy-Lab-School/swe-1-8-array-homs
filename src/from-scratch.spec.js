@@ -32,9 +32,9 @@ describe(testSuiteName, () => {
     const result = logEachValue(letters);
     expect(result).toBeUndefined();
 
-    expect(spy).toHaveBeenNthCalledWith(1, '"Value: a, index: 0."');
-    expect(spy).toHaveBeenNthCalledWith(2, '"Value: b, index: 1."');
-    expect(spy).toHaveBeenNthCalledWith(3, '"Value: c, index: 2."');
+    expect(spy).toHaveBeenNthCalledWith(1, 'Value: a, index: 0.');
+    expect(spy).toHaveBeenNthCalledWith(2, 'Value: b, index: 1.');
+    expect(spy).toHaveBeenNthCalledWith(3, 'Value: c, index: 2.');
 
     expect(letters).toEqual(['a', 'b', 'c']);
 
@@ -42,9 +42,9 @@ describe(testSuiteName, () => {
     const result2 = logEachValue(names);
     expect(result2).toBeUndefined();
 
-    expect(spy).toHaveBeenNthCalledWith(4, '"Value: Zo, index: 0."');
-    expect(spy).toHaveBeenNthCalledWith(5, '"Value: Maya, index: 1."');
-    expect(spy).toHaveBeenNthCalledWith(6, '"Value: Carms, index: 2."');
+    expect(spy).toHaveBeenNthCalledWith(4, 'Value: Zo, index: 0.');
+    expect(spy).toHaveBeenNthCalledWith(5, 'Value: Maya, index: 1.');
+    expect(spy).toHaveBeenNthCalledWith(6, 'Value: Carms, index: 2.');
 
     expect(names).toEqual(['Zo', 'Maya', 'Carms']);
 

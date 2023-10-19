@@ -38,7 +38,7 @@ _**REMEMBER: NOT A SINGLE LOOP SHOULD BE USED IN THIS ASSIGNMENT. ONLY ARRAY MET
 These prompts should be pretty straightforward, but they are getting a little vague. That's because we want you to start relying not on these prompts, but the actual tests themselves in `from-scratch.spec.js`. We know they look scarier than prompts, but that how you code at a company. The better you get at reading tests, the more you'll stand out from the Jr. Dev crowd.
 
 ## Question 1: logEachValue
-Given an array of values, you must console log the value and the index in a single string like: "Value: [VALUE], index: [INDEX]."
+Given an array of values, you must console log the value and the index in a single string like: `Value: [VALUE], index: [INDEX].`
 
 Do not modify the original array.
 
