@@ -117,7 +117,7 @@ Given an array of numbers and a number, return `true` if the sum of the array is
 Do not modify the original array.
 
 ## Question 18: numberOfLongWords
-Given an array of words and a number, return the number of words that are longer than the given number of characters. If no words are longer, return 0.
+Given an array of words, return the number of words that are longer than 4 characters. If no words are longer than 4 characters, return 0.
 
 Do not modify the original array.
 
