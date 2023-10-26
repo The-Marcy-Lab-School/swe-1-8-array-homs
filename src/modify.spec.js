@@ -6,16 +6,6 @@ const testSuiteName = 'Modify Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
 const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
-/*
-const filterVipUsers = (users, vipUserIdsSet) => {
-  return users.filter((user) => vipUserIdsSet.has(user.id));
-};
-
-const multiplicativeAverage = (nums) => {
-  return nums.reduce((total, num) => total * num, 1) / nums.length;
-};
-*/
-
 describe(testSuiteName, () => {
   it('filterVipUsers - returns array of only vip users from given array without using a loop', () => {
     const users = [
