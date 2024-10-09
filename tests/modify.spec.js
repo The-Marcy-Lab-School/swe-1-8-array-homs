@@ -1,6 +1,6 @@
 const path = require('path');
 const ScoreCounter = require('score-tests');
-const { filterVipUsers, multiplicativeAverage } = require('./modify');
+const { filterVipUsers, multiplicativeAverage } = require('../src/modify');
 
 const testSuiteName = 'Modify Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
