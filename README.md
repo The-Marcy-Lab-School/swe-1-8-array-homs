@@ -18,6 +18,7 @@
 - [Question 16: numberOfCharacters](#question-16-numberofcharacters)
 - [Question 17: removeJerkFromCompany](#question-17-removejerkfromcompany)
 - [Question 18: chosenCoordinates](#question-18-chosencoordinates)
+- [Modify](#modify)
 
 
 ## Before You Start
@@ -301,10 +302,7 @@ chosenCoordinates([[1, 2], [2, 2]], 10);
 // → undefined
 ```
 
-# Modify
+## Modify
 Looks like someone didn't get the memo about the new array methods in `modify.js`. They've written some code that uses loops. Refactor the code to use the array methods you learned today. Make sure to use the right one though!
 
 Your only guide for this section is the existing code and the tests in `modify.spec.js`. This is very much how real world refactors work, take the opportunity to practice!
-
-# Short answers
-The questions are about what situations are best for which methods. The better you get at this now, the faster you can code in a stressful interview!
