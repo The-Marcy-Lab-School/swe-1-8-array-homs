@@ -53,6 +53,22 @@ describe(testSuiteName, () => {
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
+  it('getEvenNumbers - returns a new array with only the even numbers from the given array', () => {
+    expect(getEvenNumbers([])).toEqual([]);
+    expect(getEvenNumbers([1])).toEqual([]);
+    expect(getEvenNumbers([1, 0, -3])).toEqual([0]);
+    expect(getEvenNumbers([2])).toEqual([2]);
+    expect(getEvenNumbers([2, 4, 6])).toEqual([2, 4, 6]);
+    expect(getEvenNumbers([2, 4, 6, 8, 10, 11])).toEqual([2, 4, 6, 8, 10]);
+    expect(getEvenNumbers([-12, -2, 6, 8, 10, 12])).toEqual([-12, -2, 6, 8, 10, 12]);
+
+    const untouched = [10, 21, 83];
+    getEvenNumbers(untouched);
+    expect(untouched).toEqual([10, 21, 83]);
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
   it('getUserById - returns the user with the given id or undefined', () => {
     const users = [
       { id: 1, name: 'Zo' },
@@ -68,17 +84,54 @@ describe(testSuiteName, () => {
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
-  it('getEvenNumbers - returns a new array with only the even numbers from the given array', () => {
-    expect(getEvenNumbers([])).toEqual([]);
-    expect(getEvenNumbers([1])).toEqual([]);
-    expect(getEvenNumbers([1, 0, -3])).toEqual([0]);
-    expect(getEvenNumbers([2])).toEqual([2]);
-    expect(getEvenNumbers([2, 4, 6])).toEqual([2, 4, 6]);
-    expect(getEvenNumbers([2, 4, 6, 8, 10, 11])).toEqual([2, 4, 6, 8, 10]);
-    expect(getEvenNumbers([-12, -2, 6, 8, 10, 12])).toEqual([-12, -2, 6, 8, 10, 12]);
+  it('getIndexOfApple - returns the index of the apple object or -1', () => {
+    const fruits = [
+      { name: 'banana', price: 5 },
+      { name: 'orange', price: 2 },
+      { name: 'apple', price: 1 },
+      { name: 'pear', price: 3 },
+    ];
+
+    expect(getIndexOfApple(fruits)).toBe(2);
+
+    const moreFruits = [
+      { name: 'banana', price: 5 },
+      { name: 'orange', price: 2 },
+      { name: 'pear', price: 3 },
+    ];
+
+    expect(getIndexOfApple(moreFruits)).toBe(-1);
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
+  it('doubleEveryNumber - returns a new array with each number doubled', () => {
+    expect(doubleEveryNumber([])).toEqual([]);
+    expect(doubleEveryNumber([1])).toEqual([2]);
+    expect(doubleEveryNumber([1, 0, 3])).toEqual([2, 0, 6]);
+    expect(doubleEveryNumber([2, 4, -6])).toEqual([4, 8, -12]);
+    expect(doubleEveryNumber([2, -4, 6, 8, 10])).toEqual([4, -8, 12, 16, 20]);
 
     const untouched = [10, 21, 83];
-    getEvenNumbers(untouched);
+    doubleEveryNumber(untouched);
+    expect(untouched).toEqual([10, 21, 83]);
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
+  it('convertToBooleans - returns a new array with each value converted to a boolean', () => {
+    expect(convertToBooleans([])).toEqual([]);
+    expect(convertToBooleans([1])).toEqual([true]);
+    expect(convertToBooleans([1, 0, -3])).toEqual([true, false, true]);
+    expect(convertToBooleans(['', true, NaN, 'Hello', 0]))
+      .toEqual([false, true, false, true, false]);
+    expect(convertToBooleans([undefined, 0, null, '']))
+      .toEqual([false, false, false, false]);
+    expect(convertToBooleans([!true, !false, !false, !true]))
+      .toEqual([false, true, true, false]);
+
+    const untouched = [10, 21, 83];
+    convertToBooleans(untouched);
     expect(untouched).toEqual([10, 21, 83]);
 
     scoreCounter.correct(expect); // DO NOT TOUCH
@@ -136,74 +189,6 @@ describe(testSuiteName, () => {
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
-  it('doubleEveryNumber - returns a new array with each number doubled', () => {
-    expect(doubleEveryNumber([])).toEqual([]);
-    expect(doubleEveryNumber([1])).toEqual([2]);
-    expect(doubleEveryNumber([1, 0, 3])).toEqual([2, 0, 6]);
-    expect(doubleEveryNumber([2, 4, -6])).toEqual([4, 8, -12]);
-    expect(doubleEveryNumber([2, -4, 6, 8, 10])).toEqual([4, -8, 12, 16, 20]);
-
-    const untouched = [10, 21, 83];
-    doubleEveryNumber(untouched);
-    expect(untouched).toEqual([10, 21, 83]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
-  it('getIndexOfApple - returns the index of the apple object or -1', () => {
-    const fruits = [
-      { name: 'banana', price: 5 },
-      { name: 'orange', price: 2 },
-      { name: 'apple', price: 1 },
-      { name: 'pear', price: 3 },
-    ];
-
-    expect(getIndexOfApple(fruits)).toBe(2);
-
-    const moreFruits = [
-      { name: 'banana', price: 5 },
-      { name: 'orange', price: 2 },
-      { name: 'pear', price: 3 },
-    ];
-
-    expect(getIndexOfApple(moreFruits)).toBe(-1);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
-  it('convertToBooleans - returns a new array with each value converted to a boolean', () => {
-    expect(convertToBooleans([])).toEqual([]);
-    expect(convertToBooleans([1])).toEqual([true]);
-    expect(convertToBooleans([1, 0, -3])).toEqual([true, false, true]);
-    expect(convertToBooleans(['', true, NaN, 'Hello', 0]))
-      .toEqual([false, true, false, true, false]);
-    expect(convertToBooleans([undefined, 0, null, '']))
-      .toEqual([false, false, false, false]);
-    expect(convertToBooleans([!true, !false, !false, !true]))
-      .toEqual([false, true, true, false]);
-
-    const untouched = [10, 21, 83];
-    convertToBooleans(untouched);
-    expect(untouched).toEqual([10, 21, 83]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
-  it('numberOfCharacters - returns an object with the number of times each character appears', () => {
-    expect(numberOfCharacters('')).toEqual({});
-    expect(numberOfCharacters('a')).toEqual({ a: 1 });
-    expect(numberOfCharacters('aa')).toEqual({ a: 2 });
-    expect(numberOfCharacters('ab')).toEqual({ a: 1, b: 1 });
-    expect(numberOfCharacters('ab ba')).toEqual({ a: 2, b: 2, ' ': 1 });
-    expect(numberOfCharacters('abbab')).toEqual({ a: 2, b: 3 });
-    expect(numberOfCharacters('Hello there!'))
-      .toEqual({ H: 1, e: 3, l: 2, o: 1, ' ': 1, t: 1, h: 1, r: 1, '!': 1 });
-    expect(numberOfCharacters('You good?'))
-      .toEqual({ Y: 1, o: 3, u: 1, ' ': 1, g: 1, d: 1, '?': 1 });
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
   it('anyGreaterThan10 - returns true if any number is greater than 10, false otherwise', () => {
     expect(anyGreaterThan10([])).toBe(false);
     expect(anyGreaterThan10([1])).toBe(false);
@@ -235,40 +220,6 @@ describe(testSuiteName, () => {
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
-  it('removeJerkFromCompany - removes the jerk from the given array of people', () => {
-    const people = [
-      { name: 'Zo', personality: 'nice' },
-      { name: 'Maya', personality: 'nice' },
-      { name: 'Carms', personality: 'nice' },
-      { name: 'Mike', personality: 'jerk' },
-    ];
-
-    removeJerkFromCompany(people);
-
-    expect(people).toEqual([
-      { name: 'Zo', personality: 'nice' },
-      { name: 'Maya', personality: 'nice' },
-      { name: 'Carms', personality: 'nice' },
-    ]);
-
-    const morePeople = [
-      { name: 'Zo', personality: 'nice' },
-      { name: 'Craig', personality: 'jerk' },
-      { name: 'Travis', personality: 'nice' },
-      { name: 'Joanna', personality: 'nice' },
-    ];
-
-    removeJerkFromCompany(morePeople);
-
-    expect(morePeople).toEqual([
-      { name: 'Zo', personality: 'nice' },
-      { name: 'Travis', personality: 'nice' },
-      { name: 'Joanna', personality: 'nice' },
-    ]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
   it('onlyStrings - returns a new array with only the strings from the given array', () => {
     const untouched = [10, 'Ha ha', 83];
     onlyStrings(untouched);
@@ -283,19 +234,6 @@ describe(testSuiteName, () => {
       .toEqual(['']);
     expect(onlyStrings([12, 'Hello', false, 'there']))
       .toEqual(['Hello', 'there']);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
-  });
-
-  it('chosenCoordinates - returns the first pair of coordinates that add up to the given total', () => {
-    const coordinates = [[1, 2], [3, 4], [2, 1], [9, 15], [6, 5]];
-
-    expect(chosenCoordinates(coordinates, 3)).toEqual([1, 2]);
-    expect(chosenCoordinates(coordinates, 7)).toEqual([3, 4]);
-    expect(chosenCoordinates(coordinates, 11)).toEqual([6, 5]);
-    expect(chosenCoordinates(coordinates, 12)).toBeUndefined();
-
-    expect(coordinates).toEqual([[1, 2], [3, 4], [2, 1], [9, 15], [6, 5]]);
 
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
@@ -339,6 +277,68 @@ describe(testSuiteName, () => {
     expect(numberOfLongWords(['Hello', 'there', 'friend', 'of', 'a', 'friend'])).toBe(4);
     expect(numberOfLongWords(['Hello', 'there', 'friend', 'of', 'a', 'friend', 'of', 'a', 'friend']))
       .toBe(5);
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
+  it('numberOfCharacters - returns an object with the number of times each character appears', () => {
+    expect(numberOfCharacters('')).toEqual({});
+    expect(numberOfCharacters('a')).toEqual({ a: 1 });
+    expect(numberOfCharacters('aa')).toEqual({ a: 2 });
+    expect(numberOfCharacters('ab')).toEqual({ a: 1, b: 1 });
+    expect(numberOfCharacters('ab ba')).toEqual({ a: 2, b: 2, ' ': 1 });
+    expect(numberOfCharacters('abbab')).toEqual({ a: 2, b: 3 });
+    expect(numberOfCharacters('Hello there!'))
+      .toEqual({ H: 1, e: 3, l: 2, o: 1, ' ': 1, t: 1, h: 1, r: 1, '!': 1 });
+    expect(numberOfCharacters('You good?'))
+      .toEqual({ Y: 1, o: 3, u: 1, ' ': 1, g: 1, d: 1, '?': 1 });
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
+  it('removeJerkFromCompany - removes the jerk from the given array of people', () => {
+    const people = [
+      { name: 'Zo', personality: 'nice' },
+      { name: 'Maya', personality: 'nice' },
+      { name: 'Carms', personality: 'nice' },
+      { name: 'Mike', personality: 'jerk' },
+    ];
+
+    removeJerkFromCompany(people);
+
+    expect(people).toEqual([
+      { name: 'Zo', personality: 'nice' },
+      { name: 'Maya', personality: 'nice' },
+      { name: 'Carms', personality: 'nice' },
+    ]);
+
+    const morePeople = [
+      { name: 'Zo', personality: 'nice' },
+      { name: 'Craig', personality: 'jerk' },
+      { name: 'Travis', personality: 'nice' },
+      { name: 'Joanna', personality: 'nice' },
+    ];
+
+    removeJerkFromCompany(morePeople);
+
+    expect(morePeople).toEqual([
+      { name: 'Zo', personality: 'nice' },
+      { name: 'Travis', personality: 'nice' },
+      { name: 'Joanna', personality: 'nice' },
+    ]);
+
+    scoreCounter.correct(expect); // DO NOT TOUCH
+  });
+
+  it('chosenCoordinates - returns the first pair of coordinates that add up to the given total', () => {
+    const coordinates = [[1, 2], [3, 4], [2, 1], [9, 15], [6, 5]];
+
+    expect(chosenCoordinates(coordinates, 3)).toEqual([1, 2]);
+    expect(chosenCoordinates(coordinates, 7)).toEqual([3, 4]);
+    expect(chosenCoordinates(coordinates, 11)).toEqual([6, 5]);
+    expect(chosenCoordinates(coordinates, 12)).toBeUndefined();
+
+    expect(coordinates).toEqual([[1, 2], [3, 4], [2, 1], [9, 15], [6, 5]]);
 
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
