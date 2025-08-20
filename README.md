@@ -1,23 +1,25 @@
 # Assignment 1.2.1 - Array Higher Order Methods
 - [Before You Start](#before-you-start)
-- [Question 1: logEachValue — forEach](#question-1-logeachvalue--foreach)
-- [Question 2: getEvenNumbers — filter](#question-2-getevennumbers--filter)
-- [Question 3: getUserById — find](#question-3-getuserbyid--find)
-- [Question 4: getIndexOfApple — findIndex](#question-4-getindexofapple--findindex)
-- [Question 5: doubleEveryNumber — map](#question-5-doubleeverynumber--map)
-- [Question 6: convertToBooleans — map](#question-6-converttobooleans--map)
-- [Question 7: getSquaredTotal — reduce](#question-7-getsquaredtotal--reduce)
-- [Question 8: makePeopleHappy — forEach](#question-8-makepeoplehappy--foreach)
-- [Question 9: hasOnlyEvenNumbers — every](#question-9-hasonlyevennumbers--every)
-- [Question 10: anyGreaterThan10](#question-10-anygreaterthan10)
-- [Question 11: roundAll](#question-11-roundall)
-- [Question 12: onlyStrings](#question-12-onlystrings)
-- [Question 13: stringsToLength](#question-13-stringstolength)
-- [Question 14: totalGreaterThanGiven](#question-14-totalgreaterthangiven)
-- [Question 15: numberOfLongWords](#question-15-numberoflongwords)
-- [Question 16: numberOfCharacters](#question-16-numberofcharacters)
-- [Question 17: removeJerkFromCompany](#question-17-removejerkfromcompany)
-- [Question 18: chosenCoordinates](#question-18-chosencoordinates)
+- [From Scratch](#from-scratch)
+  - [Question 1: getUserById — find](#question-1-getuserbyid--find)
+  - [Question 2: getIndexOfApple — findIndex](#question-2-getindexofapple--findindex)
+  - [Question 3: getSquaredTotal — reduce](#question-3-getsquaredtotal--reduce)
+  - [Question 4: hasOnlyEvenNumbers — every](#question-4-hasonlyevennumbers--every)
+  - [Question 5: anyGreaterThan10 — some](#question-5-anygreaterthan10--some)
+  - [Question 6: roundAll](#question-6-roundall)
+  - [Question 7: onlyStrings](#question-7-onlystrings)
+  - [Question 8: stringsToLength](#question-8-stringstolength)
+  - [Question 9: totalGreaterThanGiven](#question-9-totalgreaterthangiven)
+  - [Question 10: numberOfLongWords](#question-10-numberoflongwords)
+  - [Question 11: numberOfCharacters](#question-11-numberofcharacters)
+  - [Question 12: removeJerkFromCompany](#question-12-removejerkfromcompany)
+  - [Question 13: chosenCoordinates](#question-13-chosencoordinates)
+- [From Scratch Sorting Functions](#from-scratch-sorting-functions)
+  - [Question 14: sortWords](#question-14-sortwords)
+  - [Question 15: sortNumbers](#question-15-sortnumbers)
+  - [Question 16: sortNumbersBetter](#question-16-sortnumbersbetter)
+  - [Question 17: sortUsersByOrder](#question-17-sortusersbyorder)
+  - [Question 18: sortUsersByName](#question-18-sortusersbyname)
 - [Modify](#modify)
 
 
@@ -38,38 +40,13 @@ Some might even require more methods that you learned last week (like splice or 
 
 Challenge yourself by seeing if you can implement these in one or two lines using chaining.
 
-# From Scratch
+## From Scratch
 
 _**REMEMBER: NOT A SINGLE LOOP SHOULD BE USED IN THIS ASSIGNMENT. ONLY ARRAY METHODS.**_
 
 For the first few, we'll give you a hint. For the last few, you'll need to figure it out on your own!
 
-## Question 1: logEachValue — forEach
-Given an array of values, you must print each value next to it's index in a single string like: `Value: [VALUE], index: [INDEX].`
-
-`forEach` is the best choice here because we want to execute a side-effect (printing) for every single value in the array
-
-**Usage Example:**  
-```js
-logEachValue(["a", "b", "c"]);
-// Console output:
-// Value: a, index: 0
-// Value: b, index: 1
-// Value: c, index: 2
-```
-
-## Question 2: getEvenNumbers — filter
-Given an array of numbers, return a new array of only the even numbers from the array.
-
-`filter` is the best choice here because we want to return all of the values in the array that match a particular criteria.
-
-**Usage Example:**  
-```js
-getEvenNumbers([1, 2, 3, 4, 5, 6]);
-// → [2, 4, 6]
-```
-
-## Question 3: getUserById — find
+### Question 1: getUserById — find
 Given an array of user objects and a number representing an "id", return the object with the given `id` property. If an object isn't found, return `undefined`.
 
 `find` is the best choice here because we want to return the first value in the array that matches a particular criteria.
@@ -88,7 +65,7 @@ getUserById(users, 3);
 // → undefined
 ```
 
-## Question 4: getIndexOfApple — findIndex
+### Question 2: getIndexOfApple — findIndex
 Given an array of food objects, return the number index of the food item with a `name` of "apple". If it is not found, return `-1`.
 
 `findIndex` is the best choice here because we want to return the index of the first value in the array that matches a particular criteria (and not the value itself).
@@ -108,34 +85,7 @@ getIndexOfApple([{ name: "pear" }]);
 // → -1
 ```
 
-## Question 5: doubleEveryNumber — map
-Given an array of numbers, return a _new_ array where every element is doubled.
-
-Do not modify the original array.
-
-`map` is the best choice here because we want to return a new array containing a changed version of every value in the original array.
-
-**Usage Example:**  
-```js
-doubleEveryNumber([1, 2, 3]);
-// → [2, 4, 6]
-```
-
-
-## Question 6: convertToBooleans — map
-Given an array of values, return a new array where each value is converted to a boolean. That means that if the value is truthy, the new value should be `true` and if the value is falsy, the new value should be `false`.
-
-Do not modify the original array.
-
-`map` is again the best choice here because we want to return a new array containing a changed version of every value in the original array.
-
-**Usage Example:**  
-```js
-convertToBooleans([0, 1, "", "hello", null]);
-// → [false, true, false, true, false]
-```
-
-## Question 7: getSquaredTotal — reduce
+### Question 3: getSquaredTotal — reduce
 Given an array of numbers, return the sum of all the numbers squared. Meaning, square each number before adding it to the total.
 
 Do not modify the original array.
@@ -148,30 +98,8 @@ getSquaredTotal([1, 2, 3]);
 // → 14 (1*1 + 2*2 + 3*3)
 ```
 
-## Question 8: makePeopleHappy — forEach
-Given an array of people objects, mutate it so that each object has their `isHappy` property set to `true`. return nothing.
 
-`forEach` is the best choice here because we DO want to mutate each value in the original array. If we were to use `map`, the original array would remain unchanged. 
-
-Remember, `forEach` is best when we want a side effect to occur for every value in the array.
-
-**Usage Example:**  
-```js
-const people = [
-  { name: "Alice", isHappy: false },
-  { name: "Bob", isHappy: false }
-];
-
-makePeopleHappy(people);
-
-console.log(people);
-// → [
-//   { name: "Alice", isHappy: true },
-//   { name: "Bob", isHappy: true }
-// ]
-```
-
-## Question 9: hasOnlyEvenNumbers — every
+### Question 4: hasOnlyEvenNumbers — every
 Given an array of numbers, return `true` if every number is even, otherwise return `false`.
 
 Do not modify the original array.
@@ -185,9 +113,7 @@ hasOnlyEvenNumbers([2, 3, 4]);
 // → false
 ```
 
-## Question 10: anyGreaterThan10
-
-**For the remaining questions, you must identify which array method to use!**
+### Question 5: anyGreaterThan10 — some
 
 Given an array of numbers, return `true` if any of the numbers are greater than 10. Otherwise, return `false`.
 
@@ -201,7 +127,10 @@ anyGreaterThan10([1, 5, 7, 12]);
 anyGreaterThan10([1, 2, 3]);
 // → false
 ```
-## Question 11: roundAll
+### Question 6: roundAll
+
+**For the remaining questions, you must identify which array method to use!**
+
 Given an array of numbers, return a new array where every number is rounded to the nearest integer.
 
 Do not modify the original array.
@@ -212,7 +141,7 @@ roundAll([1.2, 3.5, 4.8]);
 // → [1, 4, 5]
 ```
 
-## Question 12: onlyStrings
+### Question 7: onlyStrings
 Given an array of values, return a new array where only strings are kept.
 
 Do not modify the original array.
@@ -223,7 +152,7 @@ onlyStrings([1, "hello", true, "world"]);
 // → ["hello", "world"]
 ```
 
-## Question 13: stringsToLength
+### Question 8: stringsToLength
 Given an array of strings, return a new array where each string is replaced by its length.
 
 Do not modify the original array.
@@ -234,7 +163,7 @@ stringsToLength(["apple", "hi", "banana"]);
 // → [5, 2, 6]
 ```
 
-## Question 14: totalGreaterThanGiven
+### Question 9: totalGreaterThanGiven
 Given an array of numbers and a number, return `true` if the sum of the array is greater than the given number. Otherwise, return `false`.
 
 Do not modify the original array.
@@ -248,7 +177,7 @@ totalGreaterThanGiven([1, 1, 1], 5);
 // → false (sum is 3)
 ```
 
-## Question 15: numberOfLongWords
+### Question 10: numberOfLongWords
 Given an array of words, return the number of words that are longer than 4 characters. If no words are longer than 4 characters, return 0.
 
 Do not modify the original array.
@@ -262,7 +191,7 @@ numberOfLongWords(["cat", "dog"]);
 // → 0
 ```
 
-## Question 16: numberOfCharacters
+### Question 11: numberOfCharacters
 Given a string return an object with the count of each character in the string. All characters must be tracked, even spaces. Meaning, don't skip over spaces. Be sure to check the tests on this one to make sure you're getting the right object output.
 
 **Usage Example:**  
@@ -271,7 +200,7 @@ numberOfCharacters("hello world");
 // → { h: 1, e: 1, l: 3, o: 2, " ": 1, w: 1, r: 1, d: 1 }
 ```
 
-## Question 17: removeJerkFromCompany
+### Question 12: removeJerkFromCompany
 Given an array of people objects, mutate it so that the person with the `personality` property of "jerk" is removed from the array. Return nothing.
 
 **Usage Example:**  
@@ -287,7 +216,7 @@ console.log(company);
 // → [ { name: "Alice", personality: "nice" } ]
 ```
 
-## Question 18: chosenCoordinates
+### Question 13: chosenCoordinates
 
 Given an array of coordinate arrays and a number, select the first coordinate pair that adds up to the specified number. Return `undefined` if no pair adds up to the number.
 
@@ -301,6 +230,83 @@ chosenCoordinates([[1, 2], [3, 7], [4, 5]], 10);
 chosenCoordinates([[1, 2], [2, 2]], 10);
 // → undefined
 ```
+
+## From Scratch Sorting Functions
+
+Let's switch it up. Let's work with a built in HOF (`array.sort`) and pass in (or not pass in) the callbacks ourselves!
+
+### Question 14: sortWords
+`sortWords` takes in an array of words and must sort them in ascending order (remember: ascend => start small get big, descending => start big get small). For the purposes of letters, ascending alphabetical means start with "a." You must return the new sorted array.
+
+Do not modify the passed in array! Be careful, is that `.sort`'s default behavior?
+
+**Usage Example**
+
+```js
+const unsortedNames = ['Charlie', 'Debbie', 'Alice', 'Bob'];
+const sortedNames = sortWords(unsortedNames);
+
+console.log(sortedNames); // ['Alice', 'Bob', 'Charlie', 'Debbie']
+console.log(unsortedNames); // ['Charlie', 'Debbie', 'Alice', 'Bob']
+```
+
+### Question 15: sortNumbers
+`sortNumbers` takes in an array of numbers and returns an array with the numbers sorted in ascending order. Do not modify the original array!
+
+**Usage Example**
+
+```js
+const unsortedNums = [1, 100, 14, 3, 2, 11];
+const sortedNums = sortNumbers(unsortedNums);
+
+console.log(sortedNums); // [1, 2, 3, 11, 14, 100]
+console.log(unsortedNums); // [1, 100, 14, 3, 2, 11]
+```
+
+### Question 16: sortNumbersBetter
+`sortNumbersBetter` is just like the above function, but now we can pass in a second boolean argument, `isDescending`. It will determine if we want to sort in ascending or descending order. If the second argument is `true`, sort descending. If the second argument is `false`, sort ascending (this is the default behavior). Do not modify the original array!
+
+**Usage Example**
+
+```js
+const unsortedNums = [1, 100, 14, 3, 2, 11];
+const bigToSmall = sortNumbersBetter(unsortedNums, true);
+console.log(bigToSmall); // [100, 14, 11, 3, 2, 1]
+
+const smallToBig = sortNumbersBetter(unsortedNums); // default param
+console.log(smallToBig); // [1, 2, 3, 11, 14, 100]
+```
+
+### Question 17: sortUsersByOrder
+Let's make something a little more interesting. Now instead of sorting primitives, let's sort an array of objects! You will do this a bunch in the real world, often data is more complex than simple primitives can convey. But let's start simple! You'll have to sort an array of users that look like this:
+
+```js
+const users = [ { name: 'Alice', order: 1 }, /* .. */ ];
+```
+
+You must sort them by the `order` property, always ascending. Do not modify the original array!
+
+```js
+const users = [
+  { name: 'Alice', order: 1 },
+  { name: 'Bob', order: 3 },
+  { name: 'Charlie', order: 2 },
+  { name: 'Debbie', order: 4 },
+];
+
+const sortedUsers = sortUsersByOrder(users);
+console.log(sortedUsers);
+// [
+//   { name: 'Alice', order: 1 },
+//   { name: 'Charlie', order: 2 },
+//   { name: 'Bob', order: 3 },
+//   { name: 'Debbie', order: 4 },
+// ]
+
+```
+
+### Question 18: sortUsersByName
+And finally, `sortUsersByName`, which uses the same user objects from the previous function, but sorts by the `name` property instead. This is tricky! The default `.sort` behavior does do alphabetical orders, but you're comparing objects! You can't just use the default behavior, you have to use a callback. Keep your wits about you, and remember how `.sort`'s callback actually sorts things (negative, 0, positive). And of course, do not modify the original array!
 
 ## Modify
 Looks like someone didn't get the memo about the new array methods in `modify.js`. They've written some code that uses loops. Refactor the code to use the array methods you learned today. Make sure to use the right one though!

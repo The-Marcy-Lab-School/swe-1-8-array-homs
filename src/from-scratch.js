@@ -1,49 +1,51 @@
-const logEachValue = () => {};
+// find
+const getUserById = () => { };
 
-const getUserById = () => {};
+// findIndex
+const getIndexOfApple = () => { };
 
-const getEvenNumbers = () => {};
+// reduce
+const getSquaredTotal = () => { };
 
-const getSquaredTotal = () => {};
+// every
+const hasOnlyEvenNumbers = () => { };
 
-const makePeopleHappy = () => {};
+// some
+const anyGreaterThan10 = () => { };
 
-const hasOnlyEvenNumbers = () => {};
+// Use your judgement to decide which array method to use!
+const roundAll = () => { };
 
-const doubleEveryNumber = () => {};
+const onlyStrings = () => { };
 
-const getIndexOfApple = () => {};
+const stringsToLength = () => { };
 
-const convertToBooleans = () => {};
+const totalGreaterThanGiven = () => { };
 
-const numberOfCharacters = () => {};
+const numberOfLongWords = () => { };
 
-const anyGreaterThan10 = () => {};
+const numberOfCharacters = () => { };
 
-const roundAll = () => {};
+const removeJerkFromCompany = () => { };
 
-const removeJerkFromCompany = () => {};
+const chosenCoordinates = () => { };
 
-const onlyStrings = () => {};
+// Sorting Functions
+const sortWords = () => { };
 
-const chosenCoordinates = () => {};
+const sortNumbers = () => { };
 
-const stringsToLength = () => {};
+const sortNumbersBetter = () => { };
 
-const totalGreaterThanGiven = () => {};
+const sortUsersByOrder = () => { };
 
-const numberOfLongWords = () => {};
+const sortUsersByName = () => { };
 
 module.exports = {
-  logEachValue,
   getUserById,
-  getEvenNumbers,
   getSquaredTotal,
-  makePeopleHappy,
   hasOnlyEvenNumbers,
-  doubleEveryNumber,
   getIndexOfApple,
-  convertToBooleans,
   numberOfCharacters,
   anyGreaterThan10,
   roundAll,
@@ -53,4 +55,9 @@ module.exports = {
   stringsToLength,
   totalGreaterThanGiven,
   numberOfLongWords,
+  sortWords,
+  sortNumbers,
+  sortNumbersBetter,
+  sortUsersByOrder,
+  sortUsersByName,
 };
