@@ -1,5 +1,9 @@
 {
   "testScores": {
+    "Modify Tests": {
+      "MoTe1": 0,
+      "MoTe2": 0
+    },
     "From Scratch Tests": {
       "FrScTe1": 0,
       "FrScTe2": 0,
@@ -21,13 +25,11 @@
       "FrScTe18": 0,
       "FrScTe19": 0,
       "FrScTe20": 0
-    },
-    "Modify Tests": {
-      "MoTe1": 0,
-      "MoTe2": 0
     }
   },
   "idToTestNameHash": {
+    "MoTe1": "Modify Tests filterVipUsers - returns array of only vip users from given array without using a loop",
+    "MoTe2": "Modify Tests multiplicativeAverage - returns the average of all numbers multiplied together without using a loop",
     "FrScTe1": "From Scratch Tests getUserById - returns the user with the given id or undefined",
     "FrScTe2": "From Scratch Tests getIndexOfApple - returns the index of the apple object or -1",
     "FrScTe3": "From Scratch Tests getSquaredTotal - returns the sum of the squares of the given numbers",
@@ -47,11 +49,11 @@
     "FrScTe17": "From Scratch Tests sortNumbersBetter - sorts a list of numbers in ascending order by default",
     "FrScTe18": "From Scratch Tests sortNumbersBetter - sorts a list of numbers in descending order if specified",
     "FrScTe19": "From Scratch Tests sortUsersByOrder - sorts a list of users by \"order\" property",
-    "FrScTe20": "From Scratch Tests sortUsersByName - sorts a list of users by name",
-    "MoTe1": "Modify Tests filterVipUsers - returns array of only vip users from given array without using a loop",
-    "MoTe2": "Modify Tests multiplicativeAverage - returns the average of all numbers multiplied together without using a loop"
+    "FrScTe20": "From Scratch Tests sortUsersByName - sorts a list of users by name"
   },
   "testNameToIdHash": {
+    "Modify Tests filterVipUsers - returns array of only vip users from given array without using a loop": "MoTe1",
+    "Modify Tests multiplicativeAverage - returns the average of all numbers multiplied together without using a loop": "MoTe2",
     "From Scratch Tests getUserById - returns the user with the given id or undefined": "FrScTe1",
     "From Scratch Tests getIndexOfApple - returns the index of the apple object or -1": "FrScTe2",
     "From Scratch Tests getSquaredTotal - returns the sum of the squares of the given numbers": "FrScTe3",
@@ -71,13 +73,11 @@
     "From Scratch Tests sortNumbersBetter - sorts a list of numbers in ascending order by default": "FrScTe17",
     "From Scratch Tests sortNumbersBetter - sorts a list of numbers in descending order if specified": "FrScTe18",
     "From Scratch Tests sortUsersByOrder - sorts a list of users by \"order\" property": "FrScTe19",
-    "From Scratch Tests sortUsersByName - sorts a list of users by name": "FrScTe20",
-    "Modify Tests filterVipUsers - returns array of only vip users from given array without using a loop": "MoTe1",
-    "Modify Tests multiplicativeAverage - returns the average of all numbers multiplied together without using a loop": "MoTe2"
+    "From Scratch Tests sortUsersByName - sorts a list of users by name": "FrScTe20"
   },
   "humanReadable": {
-    "From Scratch Tests": "0/20",
+    "Modify Tests": "0/2",
     "finalTestScore": "FINAL SCORE: 0/22",
-    "Modify Tests": "0/2"
+    "From Scratch Tests": "0/20"
   }
 }
